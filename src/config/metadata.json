@@ -1,0 +1,22 @@
+{
+  "title": {
+    "template": "%s - Quilteck",
+    "default": "Quilteck"
+  },
+  "description": "MTG deck box maker | 3D prints",
+  "keywords": [
+    "MTG",
+    "magic the gathering",
+    "deck box",
+    "commander deck",
+    "3d prints",
+    "geek",
+    "phyrexia deck",
+    "fallout deck",
+    "Final Fantasy deck"
+  ],
+  "robots": {
+    "follow": true,
+    "index": true
+  }
+}
