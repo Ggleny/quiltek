@@ -5,11 +5,12 @@ const config = {
   printWidth: 120,
   trailingComma: "es5",
   tailwindFunctions: ["clsx", "tw"],
-  plugins: ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
+  plugins: ["prettier-plugin-tailwindcss"],
   tailwindStylesheet: "./src/styles/tailwind.css",
   importOrder: ["^react", "^@/(.*)$", "^[./]"],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
+  tabWidth: 2
 };
 
 export default config;
