@@ -2,6 +2,7 @@
   "name": "quiltek",
   "version": "0.1.0",
   "private": true,
+  "prettier": "./prettier.config.mjs",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -14,6 +15,7 @@
     "@hugeicons/react": "^1.0.5",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.16",
+    "clsx": "^2.1.1",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -27,7 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
+    "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

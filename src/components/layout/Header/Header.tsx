@@ -1,9 +1,12 @@
-import Logo from "@/shared/Logo/Logo";
-import clsx from "clsx";
-import { FC } from "react";
-import CartBtn from "./CartBtn";
+import Logo from '@/components/ui/Logo'
+import clsx from 'clsx'
+import { FC } from 'react'
+import AvatarDropdown from './AvatarDropdown'
+import CartBtn from './CartBtn'
+import SearchBtnPopover from './SearchBtnPopover'
+import WishlistBtn from './WishlistBtn'
 export interface HeaderProps {
-  hasBorderBottom?: boolean;
+  hasBorderBottom?: boolean
 }
 
 const Header: FC<HeaderProps> = async ({ hasBorderBottom = true }) => {
@@ -12,9 +15,9 @@ const Header: FC<HeaderProps> = async ({ hasBorderBottom = true }) => {
       <div className="container">
         <div
           className={clsx(
-            "flex h-20 justify-between gap-x-2.5 border-neutral-200 dark:border-neutral-700",
-            hasBorderBottom && "border-b",
-            !hasBorderBottom && "has-[.header-popover-full-panel]:border-b"
+            'flex h-20 justify-between gap-x-2.5 border-neutral-200 dark:border-neutral-700',
+            hasBorderBottom && 'border-b',
+            !hasBorderBottom && 'has-[.header-popover-full-panel]:border-b'
           )}
         >
           <div className="flex items-center justify-center gap-x-3 sm:gap-x-8">
@@ -23,12 +26,15 @@ const Header: FC<HeaderProps> = async ({ hasBorderBottom = true }) => {
           </div>
 
           <div className="flex flex-1 items-center justify-end gap-x-2.5 sm:gap-x-5">
+            <SearchBtnPopover />
+            <AvatarDropdown />
+            <WishlistBtn />
             <CartBtn />
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

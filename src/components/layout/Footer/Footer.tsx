@@ -1,4 +1,4 @@
-import Logo from "@/shared/Logo/Logo";
+import Logo from '@/components/ui/Logo'
 
 const Footer: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
