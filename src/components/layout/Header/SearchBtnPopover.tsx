@@ -1,13 +1,14 @@
 'use client'
 
-import Divider from '@/components/ui/Divider'
-import Link from '@/components/ui/Link'
+import { Divider, Link } from '@/components/ui'
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { Cancel01Icon, Search01Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
+import { useTranslations } from 'next-intl'
 import { redirect } from 'next/navigation'
 
 const SearchBtnPopover = () => {
+  const t = useTranslations('components.searchBtnPopover')
   return (
     <Popover>
       <PopoverButton className="-m-2.5 flex cursor-pointer items-center justify-center rounded-full p-2.5 hover:bg-neutral-100 focus-visible:outline-0 dark:hover:bg-neutral-800">
@@ -50,18 +51,18 @@ const SearchBtnPopover = () => {
             </form>
             <Divider className="my-4 block md:hidden" />
             <div className="block text-xs/6 text-neutral-500 uppercase md:hidden">
-              Press{' '}
+              {t('press')}{' '}
               <Link
                 href={'/search'}
                 className="rounded-sm bg-neutral-100 px-1.5 py-0.5 text-xs font-medium text-neutral-900"
               >
-                <kbd className="text-xs font-medium">Enter</kbd>
+                <kbd className="text-xs font-medium">{t('enter')}</kbd>
               </Link>{' '}
-              to search or{' '}
+              {t('toSeach')}{' '}
               <kbd className="rounded-sm bg-neutral-100 px-1.5 py-0.5 text-xs font-medium text-neutral-900">
-                <span className="text-xs font-medium">Esc</span>
+                <span className="text-xs font-medium">{t('esc')}</span>
               </kbd>{' '}
-              to cancel
+              {t('toCancel')}
             </div>
           </div>
         </div>

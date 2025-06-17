@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from '../Link'
+import { Link } from '../Link'
 
 export interface LogoProps extends React.ComponentPropsWithoutRef<'svg'> {
   className?: string

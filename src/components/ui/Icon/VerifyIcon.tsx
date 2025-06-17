@@ -5,7 +5,7 @@ export interface VerifyIconProps {
   iconClass?: string
 }
 
-const VerifyIcon: FC<VerifyIconProps> = ({ className = 'ml-1', iconClass = 'w-5 h-5' }) => {
+export const VerifyIcon: FC<VerifyIconProps> = ({ className = 'ml-1', iconClass = 'w-5 h-5' }) => {
   return (
     <span className={className}>
       <svg className={iconClass} viewBox="0 0 17 17" fill="none">
@@ -28,5 +28,3 @@ const VerifyIcon: FC<VerifyIconProps> = ({ className = 'ml-1', iconClass = 'w-5 
     </span>
   )
 }
-
-export default VerifyIcon

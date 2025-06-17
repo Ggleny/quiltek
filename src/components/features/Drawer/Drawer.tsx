@@ -1,10 +1,11 @@
 'use client'
 
-import Logo from '@/components/ui/Logo'
+import { Logo } from '@/components/ui'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { Cancel01Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 import { DrawerMaxWidth, DrawerProps } from './types'
 import { useDrawer } from './useDrawer'
 
@@ -37,6 +38,7 @@ export function Drawer({
   showHeader = true,
   className,
 }: DrawerProps) {
+  const t = useTranslations('components.drawer')
   const { mode: activeMode, closeDrawer } = useDrawer()
   const isOpen = mode === activeMode
 
@@ -84,7 +86,7 @@ export function Drawer({
                       type="button"
                       className="group -m-4 cursor-pointer p-4"
                       onClick={closeDrawer}
-                      aria-label="Close drawer"
+                      aria-label={t('closeButton.ariaLabel')}
                     >
                       <HugeiconsIcon
                         className="transition-transform duration-200 group-hover:rotate-90"

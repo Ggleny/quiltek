@@ -1,18 +1,18 @@
 'use client'
 
-import Avatar from '@/components/ui/Avatar/Avatar'
-import Divider from '@/components/ui/Divider'
-import Link from '@/components/ui/Link'
+import { Avatar, Divider, Link } from '@/components/ui'
 import avatarImage from '@/images/users/avatar.png'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { UserCircle02Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
+import { useTranslations } from 'next-intl'
 
 interface Props {
   className?: string
 }
 
 export default function AvatarDropdown({ className }: Props) {
+  const t = useTranslations('components.avatarDropdown')
   return (
     <div className={className}>
       <Popover>
@@ -30,6 +30,7 @@ export default function AvatarDropdown({ className }: Props) {
               <Avatar imgUrl={avatarImage.src} sizeClass="size-12" />
 
               <div className="grow">
+                {/*TODO: complete user Section */}
                 <h4 className="font-semibold">User name</h4>
                 <p className="mt-0.5 text-xs">Los Angeles, CA</p>
               </div>
@@ -61,7 +62,7 @@ export default function AvatarDropdown({ className }: Props) {
                 </svg>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium">{'My Account'}</p>
+                <p className="text-sm font-medium">{t('myAccount')}</p>
               </div>
             </Link>
 
@@ -107,7 +108,7 @@ export default function AvatarDropdown({ className }: Props) {
                 </svg>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium">My Orders</p>
+                <p className="text-sm font-medium">{t('myOrders')}</p>
               </div>
             </Link>
 
@@ -128,7 +129,7 @@ export default function AvatarDropdown({ className }: Props) {
                 </svg>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium">Wishlist</p>
+                <p className="text-sm font-medium">{t('wishlist')}</p>
               </div>
             </Link>
 
@@ -186,7 +187,7 @@ export default function AvatarDropdown({ className }: Props) {
                 </svg>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium">{'Help'}</p>
+                <p className="text-sm font-medium">{t('help')}</p>
               </div>
             </Link>
 
@@ -221,7 +222,7 @@ export default function AvatarDropdown({ className }: Props) {
                 </svg>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium">{'Log out'}</p>
+                <p className="text-sm font-medium">{t('logout')}</p>
               </div>
             </Link>
           </div>

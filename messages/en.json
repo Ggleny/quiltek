@@ -1,0 +1,34 @@
+{
+  "Manifest": {
+    "name": "Quilteck",
+    "short_name": "Quilteck",
+    "description": "MTG deck box maker | 3D prints"
+  },
+  "paths": {
+    "product": "product",
+    "wishlist": "wishlist"
+  },
+  "components": {
+    "drawer": {
+      "closeButton": {
+        "ariaLabel": "Close drawer"
+      }
+    },
+    "searchBtnPopover": {
+      "input": {
+        "ariaLabel": "Search for products"
+      },
+      "press": "Press",
+      "enter": "Enter",
+      "esc": "Esc",
+      "toSeach": "to search or",
+      "toCancel": "to Cancel"
+    },
+    "avatarDropdown": {
+      "logout": "Log out",
+      "help": "Help",
+      "myAccount": "My Account",
+      "myOrders": "My Orders"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import avatarImage from '@/images/users/avatar.png'
 import Image, { StaticImageData } from 'next/image'
 import { FC } from 'react'
-import VerifyIcon from '../Icon/VerifyIcon'
+import { VerifyIcon } from '../Icon'
 
 export interface AvatarProps {
   containerClassName?: string
@@ -13,7 +13,7 @@ export interface AvatarProps {
   hasCheckedClass?: string
 }
 
-const Avatar: FC<AvatarProps> = ({
+export const Avatar: FC<AvatarProps> = ({
   containerClassName = 'ring-1 ring-white dark:ring-neutral-900',
   sizeClass = 'size-6 text-sm',
   radius = 'rounded-full',
@@ -54,5 +54,3 @@ const Avatar: FC<AvatarProps> = ({
     </div>
   )
 }
-
-export default Avatar

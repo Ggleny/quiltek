@@ -1,4 +1,4 @@
-import Logo from '@/components/ui/Logo'
+import { Logo } from '@/components/ui'
 import clsx from 'clsx'
 import { FC } from 'react'
 import AvatarDropdown from './AvatarDropdown'
@@ -9,7 +9,7 @@ export interface HeaderProps {
   hasBorderBottom?: boolean
 }
 
-const Header: FC<HeaderProps> = async ({ hasBorderBottom = true }) => {
+export const Header: FC<HeaderProps> = async ({ hasBorderBottom = true }) => {
   return (
     <div className="relative z-10">
       <div className="container">
@@ -36,5 +36,3 @@ const Header: FC<HeaderProps> = async ({ hasBorderBottom = true }) => {
     </div>
   )
 }
-
-export default Header
