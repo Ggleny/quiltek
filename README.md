@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quiltek - Next.js E-Commerce Project
 
-## Getting Started
+**Project Board**: [View GitHub Projects](https://github.com/Ggleny/quiltek/projects)
 
-First, run the development server:
+[![GitHub Project](https://img.shields.io/badge/GitHub-Project-blue)](https://github.com/Ggleny/quiltek/projects)
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](http://localhost:6006)
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black)](https://nextjs.org)
 
+Modern e-commerce platform built with Next.js, featuring internationalization and component-driven development.
+
+## 📐 Component Architecture
+
+![Quiltek Component Diagram]
+![Untitled-2025-06-18-2343](https://github.com/user-attachments/assets/615b3880-1f5e-4f9d-92ea-153c43d386c5)
+
+**Key Components:**
+- **Core UI**: `Button`, `Input`, `AvatarDropdown`, `Drawer`
+- **Commerce**: `ProductCard`, `CartDrawer`, `Wishlist`
+- **Layout**: `Header`, `Footer`, `DashboardLayout`
+- **i18n**: Localized components with `next-intl`
+
+[Edit Diagram](https://excalidraw.com/#json=MHAW0SM-gFrudrj4Gmyda,G76VehbQyel3RxwSgCV-hw) | [View Fullscreen](https://excalidraw.com/#json=MHAW0SM-gFrudrj4Gmyda,G76VehbQyel3RxwSgCV-hw)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 20+
+- npm/yarn/pnpm
+
+### Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Ggleny/quiltek.git
+cd quiltek
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
+```bash
+# Next.js dev server
+npm run dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Storybook
+npm run storybook
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Access:**
+- App: `http://localhost:3000`
+- Storybook: `http://localhost:6006`
 
-## Learn More
+## 🛠 Tech Stack
+- **Framework**: [Next.js 14](https://nextjs.org) (App Router)
+- **i18n**: [next-intl](https://next-intl-docs.vercel.app)
+- **UI**: [Tailwind CSS](https://tailwindcss.com) + [HeadlessUI](https://headlessui.com)
+- **Component Docs**: [Storybook](https://storybook.js.org)
 
-To learn more about Next.js, take a look at the following resources:
+## 📚 Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Storybook Implementation
+Our Storybook setup includes:
+- Automated component documentation
+- Internationalization support
+- Dark mode testing
+- Interactive playground
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Build Storybook
+npm run build-storybook
+```
 
-## Deploy on Vercel
+### Key Configuration Files
+| File | Purpose |
+|------|---------|
+| `.storybook/main.ts` | Storybook plugins/config |
+| `.storybook/preview.ts` | Global decorators |
+| `tailwind.config.js` | UI theme configuration |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌍 Internationalization
+Supported languages:
+- English (default)
+- Spanish
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Add new locales in:
+```text
+locales/
+  en.json
+  es.json
+```
+
+## 🖼 UI Components
+Example component structure:
+```text
+components/
+  ui/          # Primitive components
+  feature/    # E-commerce specific
+  layout/      # App structure
+```
+
+## 🚀 Deployment
+Deploy on [Vercel](https://vercel.com/new) with these environment variables:
+```env
+NEXT_PUBLIC_BASE_URL=your-domain.com
+NEXT_PUBLIC_API_KEY=your-key
+```
+
+## 🤝 Contributing
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+
