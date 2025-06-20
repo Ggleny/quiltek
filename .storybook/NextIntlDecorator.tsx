@@ -3,20 +3,7 @@
 
 import { NextIntlClientProvider } from 'next-intl'
 import React from 'react'
-
-// Default English translations
-const defaultMessages = {
-  components: {
-    avatarDropdown: {
-      myAccount: 'My Account',
-      myOrders: 'My Orders',
-      wishlist: 'Wishlist',
-      help: 'Help Center',
-      logout: 'Log Out',
-    },
-    // Add other translation namespaces as needed
-  },
-}
+import * as defaultMessages from '../messages/en.json'
 
 export function NextIntlDecorator(Story: React.FC) {
   return (

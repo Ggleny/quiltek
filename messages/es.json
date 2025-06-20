@@ -25,10 +25,32 @@
       "toCancel": "to Cancel"
     },
     "avatarDropdown": {
-      "logout": "Cerrar Session",
-      "help": "Ayuda",
-      "myAccount": "Mi cuenta",
-      "myOrders": "Mis Pedidos"
+      "logout": "Log out",
+      "help": "Help",
+      "myAccount": "My Account",
+      "myOrders": "My Orders",
+      "wishlist": "Wishlist"
+    },
+    "footer": {
+      "description": "MTG deck box maker | 3D prints",
+      "help": "Help"
+    },
+    "contactSection": {
+      "title": "Contact",
+      "whatsappMessage": "Hello! I have a question about your services."
+    },
+    "linksSection": {
+      "categories": "Categories",
+      "shopAll": "Shop All",
+      "deckboxs": "Deckboxs",
+      "decoration": "Decoration",
+      "miscellaneous": "Miscellaneous",
+
+      "navigate": "Navigate",
+      "myAccount": "My Account",
+      "whislist": "Wishlist",
+      "returnPolicity": "Return Policity",
+      "delivery": "Delivery"
     }
   }
 }
