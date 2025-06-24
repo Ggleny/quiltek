@@ -1,4 +1,6 @@
-import { default as heroImage1 } from '@/images/hero-right-1.png'
+import { default as heroImage1 } from '@/images/hero-1.png'
+import { default as heroImage2 } from '@/images/hero-2.png'
+
 //TODO: change the texts to support multilanguage
 export const heroData = [
   {
@@ -12,7 +14,7 @@ export const heroData = [
   },
   {
     id: 2,
-    imageUrl: heroImage1.src,
+    imageUrl: heroImage2.src,
     heading: 'Guardá tu mazo <br /> con estilo legendario',
     subHeading: 'Deckboxes 3D exclusivas para cartas Magic 🧙‍♂️',
     btnText: 'Explorá modelos',
