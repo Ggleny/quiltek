@@ -9,6 +9,7 @@ import { baseUrl } from '@/lib/utils'
 import '@/styles/tailwind.css'
 import { Poppins } from 'next/font/google'
 import GlobalClient from '../GlobalClient'
+import { ApplicationLayout } from '../application-layout'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -30,7 +31,6 @@ export default async function RootLayout({
 }>) {
   // Ensure that the incoming `locale` is valid
   const { locale } = await params
-  console.log(params, routing, locale)
   if (!hasLocale(routing.locales, locale)) {
     notFound()
   }
@@ -40,7 +40,7 @@ export default async function RootLayout({
       <body className="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200">
         <NextIntlClientProvider>
           <Drawer.Provider>
-            {children}
+            <ApplicationLayout>{children}</ApplicationLayout>
 
             {/* Client component: Toaster */}
             <GlobalClient />

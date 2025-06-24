@@ -51,6 +51,11 @@
       "whislist": "Wishlist",
       "returnPolicity": "Return Policity",
       "delivery": "Delivery"
+    },
+    "languageCurrencySelector": {
+      "language": "Language",
+      "ariaLabel": "Select language and currency",
+      "title": "Select your country"
     }
   }
 }

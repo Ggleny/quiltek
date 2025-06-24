@@ -1,3 +1,4 @@
+import { LanguageCurrencySelector } from '@/components/features/LanguageCurrencySelector'
 import { Logo } from '@/components/ui'
 import clsx from 'clsx'
 import { FC } from 'react'
@@ -21,11 +22,13 @@ export const Header: FC<HeaderProps> = async ({ hasBorderBottom = true }) => {
           )}
         >
           <div className="flex items-center justify-center gap-x-3 sm:gap-x-8">
-            <Logo />
+            <Logo size="md" className="md:xl" />
             <div className="hidden h-9 border-l border-neutral-200 md:block dark:border-neutral-700"></div>
           </div>
 
           <div className="flex flex-1 items-center justify-end gap-x-2.5 sm:gap-x-5">
+            <LanguageCurrencySelector className="hidden md:block" />
+
             <SearchBtnPopover />
             <AvatarDropdown />
             <WishlistBtn />

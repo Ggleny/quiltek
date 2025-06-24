@@ -1,5 +1,7 @@
 export * from './Avatar'
+export * from './Button'
 export * from './Divider'
+export * from './HeroSlider'
 export * from './Icon'
 export * from './Link'
 export * from './Logo'

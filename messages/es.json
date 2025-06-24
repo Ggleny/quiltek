@@ -16,7 +16,7 @@
     },
     "searchBtnPopover": {
       "input": {
-        "ariaLabel": "Search for products"
+        "ariaLabel": "Busca tus productos"
       },
       "press": "Press",
       "enter": "Enter",
@@ -26,17 +26,17 @@
     },
     "avatarDropdown": {
       "logout": "Log out",
-      "help": "Help",
-      "myAccount": "My Account",
-      "myOrders": "My Orders",
-      "wishlist": "Wishlist"
+      "help": "Ayuda",
+      "myAccount": "Mi Cuenta",
+      "myOrders": "Mis Pedidos",
+      "wishlist": "Mis Favoritos"
     },
     "footer": {
       "description": "MTG deck box maker | 3D prints",
-      "help": "Help"
+      "help": "Ayuda"
     },
     "contactSection": {
-      "title": "Contact",
+      "title": "Contacto",
       "whatsappMessage": "Hello! I have a question about your services."
     },
     "linksSection": {
@@ -51,6 +51,11 @@
       "whislist": "Wishlist",
       "returnPolicity": "Return Policity",
       "delivery": "Delivery"
+    },
+    "languageCurrencySelector": {
+      "language": "Idioma",
+      "ariaLabel": "Selecciona tu idioma y moneda",
+      "title": "Selecciona tu ubicacion"
     }
   }
 }
