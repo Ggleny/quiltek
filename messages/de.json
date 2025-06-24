@@ -1,0 +1,61 @@
+{
+  "Manifest": {
+    "name": "Quilteck",
+    "short_name": "Quilteck",
+    "description": "MTG deck box maker | 3D prints"
+  },
+  "paths": {
+    "product": "product",
+    "wishlist": "wishlist"
+  },
+  "components": {
+    "drawer": {
+      "closeButton": {
+        "ariaLabel": "Close drawer"
+      }
+    },
+    "searchBtnPopover": {
+      "input": {
+        "ariaLabel": "Search for products"
+      },
+      "press": "Press",
+      "enter": "Enter",
+      "esc": "Esc",
+      "toSeach": "to search or",
+      "toCancel": "to Cancel"
+    },
+    "avatarDropdown": {
+      "logout": "Log out",
+      "help": "Help",
+      "myAccount": "My Account",
+      "myOrders": "My Orders",
+      "wishlist": "Wishlist"
+    },
+    "footer": {
+      "description": "MTG deck box maker | 3D prints",
+      "help": "Help"
+    },
+    "contactSection": {
+      "title": "Contact",
+      "whatsappMessage": "Hello! I have a question about your services."
+    },
+    "linksSection": {
+      "categories": "Categories",
+      "shopAll": "Shop All",
+      "deckboxs": "Deckboxs",
+      "decoration": "Decoration",
+      "miscellaneous": "Miscellaneous",
+
+      "navigate": "Navigate",
+      "myAccount": "My Account",
+      "whislist": "Wishlist",
+      "returnPolicity": "Return Policity",
+      "delivery": "Delivery"
+    },
+    "languageCurrencySelector": {
+      "language": "Language",
+      "ariaLabel": "Select language and currency",
+      "title": "Select your country"
+    }
+  }
+}

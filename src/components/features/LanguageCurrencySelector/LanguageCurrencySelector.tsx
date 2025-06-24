@@ -6,6 +6,7 @@ import { ArrowDown01Icon, Cancel01Icon, Globe02Icon } from '@hugeicons/core-free
 import { HugeiconsIcon } from '@hugeicons/react'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
+import { usePathname, useRouter } from 'next/navigation' // ⬅️ Import necesario
 import { FC, Fragment, useState } from 'react'
 
 interface LanguageCurrencySelectorProps {
@@ -13,16 +14,34 @@ interface LanguageCurrencySelectorProps {
 }
 
 export const LanguageCurrencySelector: FC<LanguageCurrencySelectorProps> = ({ className }) => {
+  const router = useRouter()
+  const pathname = usePathname()
   const t = useTranslations('components.languageCurrencySelector')
   const [isOpen, setIsOpen] = useState(false)
   const [selectedCountry, setSelectedCountry] = useState(countriesWithCurrencies[0])
-  function openModal() {
+  const openModal = () => {
     setIsOpen(true)
   }
 
-  function closeModal() {
+  const closeModal = () => {
     setIsOpen(false)
   }
+
+  const handleCountrySelect = async (country: IcountriesWithCurrencies) => {
+    try {
+      setSelectedCountry(country)
+      closeModal()
+
+      const newLocale = country.language
+      const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}(?:-[a-z]{2})?/, '')
+
+      await router.push(`/${newLocale}${pathWithoutLocale}`)
+    } catch (error) {
+      console.error('Failed to navigate:', error)
+      //TODO: show a toast error
+    }
+  }
+
   return (
     <>
       <div className={className}>
@@ -93,14 +112,9 @@ export const LanguageCurrencySelector: FC<LanguageCurrencySelectorProps> = ({ cl
                   <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                     {countriesWithCurrencies.map((country: IcountriesWithCurrencies) => (
                       <button
+                        className="text-left"
                         key={country.urlPrefix}
-                        onClick={() => {
-                          setSelectedCountry(country)
-                          closeModal()
-                        }}
-                        className={`items-left flex flex-col rounded-lg p-3 transition-colors hover:bg-gray-50 ${
-                          selectedCountry.urlPrefix === country.urlPrefix ? 'ring-2 ring-blue-500' : ''
-                        }`}
+                        onClick={() => handleCountrySelect(country)}
                       >
                         <div className="text-sm font-medium text-gray-700">{country.country}</div>
                         <div className="text-sm text-gray-500">
