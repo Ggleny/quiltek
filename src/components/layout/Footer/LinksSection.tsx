@@ -1,9 +1,9 @@
-import { CustomLink } from '@/data/types'
+import { ICustomLink } from '@/data/types'
 import { useTranslations } from 'next-intl'
 
 export interface MenuLinksSection {
   title: string
-  menus: CustomLink[]
+  menus: ICustomLink[]
 }
 export const LinksSection = ({ menu, index }: { menu: MenuLinksSection; index: number }) => {
   const t = useTranslations('components.linksSection')

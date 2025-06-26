@@ -56,6 +56,17 @@
       "language": "Idioma",
       "ariaLabel": "Selecciona tu idioma y moneda",
       "title": "Selecciona tu ubicacion"
+    },
+    "notifyAddToCart": {
+      "addedToCard": "Added to cart!",
+      "viewCard": "View cart"
+    },
+    "productActions": {
+      "addToBag": "Add to bag",
+      "quickView": "Quick view"
+    },
+    "sectionCollection": {
+      "showMore": "Show me more"
     }
   }
 }

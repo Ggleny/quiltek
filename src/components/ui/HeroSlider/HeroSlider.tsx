@@ -23,7 +23,7 @@ export const HeroSlide: FC<Props> = ({ index, isActive, item }) => {
   return (
     <div
       className={clsx(
-        'fade--animation relative flex flex-col gap-10 overflow-hidden py-14 pl-container sm:min-h-[calc(100vh-5rem)] lg:flex-row lg:items-center',
+        'fade--animation relative flex flex-col gap-10 overflow-hidden py-14 pl-container sm:min-h-[calc(50vh-5rem)] lg:flex-row lg:items-center',
         isActive ? 'flex' : 'hidden'
       )}
       key={index}
@@ -31,7 +31,7 @@ export const HeroSlide: FC<Props> = ({ index, isActive, item }) => {
       <div className={clsx('absolute inset-0 -z-10', item.bgClass)}>
         <Image
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 500px) 100vw, 30vw"
           className="absolute h-full w-full object-contain"
           src={backgroundLineSvg}
           alt="hero"
@@ -58,12 +58,12 @@ export const HeroSlide: FC<Props> = ({ index, isActive, item }) => {
 
       <div className="relative -z-10 flex-1/2 lg:pr-10">
         <Image
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 500px) 100vw, 30vw"
           className="object-contain fade--animation__image select-none"
           src={item.imageUrl}
           alt={item.heading}
-          width={790}
-          height={790}
+          width={500}
+          height={500}
           priority
         />
       </div>
